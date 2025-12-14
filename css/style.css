@@ -176,6 +176,41 @@ body {
     .rain-column {
         font-size: 12px;
     }
+    
+    .social-orbit {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .social-link {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-icon {
+        width: 15px;
+        height: 15px;
+    }
+    
+    @keyframes orbitTwitter {
+        0% { transform: rotate(0deg) translateX(90px) translateY(0px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(90px) translateY(0px) rotate(-360deg); }
+    }
+    
+    @keyframes orbitGithub {
+        0% { transform: rotate(90deg) translateX(120px) translateY(0px) rotate(-90deg); }
+        100% { transform: rotate(450deg) translateX(120px) translateY(0px) rotate(-450deg); }
+    }
+    
+    @keyframes orbitLinkedin {
+        0% { transform: rotate(180deg) translateX(150px) translateY(0px) rotate(-180deg); }
+        100% { transform: rotate(540deg) translateX(150px) translateY(0px) rotate(-540deg); }
+    }
+    
+    @keyframes orbitInstagram {
+        0% { transform: rotate(270deg) translateX(180px) translateY(0px) rotate(-270deg); }
+        100% { transform: rotate(630deg) translateX(180px) translateY(0px) rotate(-630deg); }
+    }
 }
 
 @media (max-width: 480px) {
@@ -185,6 +220,41 @@ body {
     
     .rain-column {
         font-size: 10px;
+    }
+    
+    .social-orbit {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .social-link {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .social-icon {
+        width: 12px;
+        height: 12px;
+    }
+    
+    @keyframes orbitTwitter {
+        0% { transform: rotate(0deg) translateX(75px) translateY(0px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(75px) translateY(0px) rotate(-360deg); }
+    }
+    
+    @keyframes orbitGithub {
+        0% { transform: rotate(90deg) translateX(100px) translateY(0px) rotate(-90deg); }
+        100% { transform: rotate(450deg) translateX(100px) translateY(0px) rotate(-450deg); }
+    }
+    
+    @keyframes orbitLinkedin {
+        0% { transform: rotate(180deg) translateX(125px) translateY(0px) rotate(-180deg); }
+        100% { transform: rotate(540deg) translateX(125px) translateY(0px) rotate(-540deg); }
+    }
+    
+    @keyframes orbitInstagram {
+        0% { transform: rotate(270deg) translateX(150px) translateY(0px) rotate(-270deg); }
+        100% { transform: rotate(630deg) translateX(150px) translateY(0px) rotate(-630deg); }
     }
 }
 
@@ -197,6 +267,10 @@ body {
     
     .rain-column {
         animation-duration: 20s !important;
+    }
+    
+    .social-link {
+        animation: none !important;
     }
 }
 
@@ -260,7 +334,7 @@ body {
     width: 400px;
     height: 400px;
     pointer-events: none;
-    z-index: 1;
+    z-index: 3;
 }
 
 .social-link {
@@ -318,23 +392,23 @@ body {
 
 /* Orbital Animations */
 @keyframes orbitTwitter {
-    0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
-    100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+    0% { transform: rotate(0deg) translateX(120px) translateY(0px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(120px) translateY(0px) rotate(-360deg); }
 }
 
 @keyframes orbitGithub {
-    0% { transform: rotate(90deg) translateX(160px) rotate(-90deg); }
-    100% { transform: rotate(450deg) translateX(160px) rotate(-450deg); }
+    0% { transform: rotate(90deg) translateX(160px) translateY(0px) rotate(-90deg); }
+    100% { transform: rotate(450deg) translateX(160px) translateY(0px) rotate(-450deg); }
 }
 
 @keyframes orbitLinkedin {
-    0% { transform: rotate(180deg) translateX(200px) rotate(-180deg); }
-    100% { transform: rotate(540deg) translateX(200px) rotate(-540deg); }
+    0% { transform: rotate(180deg) translateX(200px) translateY(0px) rotate(-180deg); }
+    100% { transform: rotate(540deg) translateX(200px) translateY(0px) rotate(-540deg); }
 }
 
 @keyframes orbitInstagram {
-    0% { transform: rotate(270deg) translateX(240px) rotate(-270deg); }
-    100% { transform: rotate(630deg) translateX(240px) rotate(-630deg); }
+    0% { transform: rotate(270deg) translateX(240px) translateY(0px) rotate(-270deg); }
+    100% { transform: rotate(630deg) translateX(240px) translateY(0px) rotate(-630deg); }
 }
 
 /* Cursor Logo */
