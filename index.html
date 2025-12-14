@@ -9,9 +9,9 @@
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" 
           content="default-src 'self'; 
-                   script-src 'self' 'unsafe-inline'; 
-                   style-src 'self' 'unsafe-inline'; 
-                   font-src 'self'; 
+                   script-src 'self'; 
+                   style-src 'self' https://fonts.googleapis.com; 
+                   font-src 'self' https://fonts.gstatic.com; 
                    img-src 'self' https://picsum.photos data:; 
                    connect-src 'self'; 
                    object-src 'none'; 
@@ -23,38 +23,14 @@
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta name="robots" content="index, follow">
     
-    <!-- Simple CSS Loading -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Critical CSS Inlined for Performance -->
-    <style>
-        /* Critical above-the-fold styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1e293b; background-color: #ffffff; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo h1 { font-size: 1.5rem; font-weight: 600; color: #2563eb; }
-        .nav-menu { display: flex; list-style: none; gap: 2rem; }
-        .nav-link { text-decoration: none; color: #1e293b; font-weight: 500; transition: color 0.3s ease; }
-        .nav-link:hover { color: #2563eb; }
-        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
-        .hero-content { max-width: 800px; padding: 0 20px; }
-        .hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem; }
-        .hero p { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; }
-        .cta-button { display: inline-block; background: #f59e0b; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; }
-        .cta-button:hover { background: #d97706; transform: translateY(-2px); }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; }
-        .hamburger span { width: 25px; height: 3px; background: #1e293b; margin: 3px 0; transition: 0.3s; }
-        .icon { width: 1em; height: 1em; fill: currentColor; display: inline-block; vertical-align: middle; }
-        @media (max-width: 768px) { 
-            .nav-menu { position: fixed; left: -100%; top: 70px; flex-direction: column; background: white; width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 27px rgba(0,0,0,0.05); } 
-            .nav-menu.active { left: 0; } 
-            .hamburger { display: flex; } 
-            .hero h1 { font-size: 2.5rem; } 
-            .hero p { font-size: 1.1rem; } 
-        }
-    </style>
+    <!-- CSS Loading -->
+    <link rel="stylesheet" href="css/style.css">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 </head>
 <body>
     <header class="header">
