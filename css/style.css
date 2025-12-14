@@ -177,18 +177,19 @@ body {
         font-size: 12px;
     }
     
-    .social-sidebar {
-        right: 10px;
-        gap: 1rem;
+    .social-nav {
+        top: calc(50% + 3rem);
+        gap: 1.5rem;
+        padding: 0.75rem;
     }
     
     .social-link {
-        padding: 0.5rem 0.75rem;
+        padding: 0.6rem 0.9rem;
     }
     
     .social-icon {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
     }
     
     .social-text {
@@ -205,18 +206,19 @@ body {
         font-size: 10px;
     }
     
-    .social-sidebar {
-        right: 5px;
-        gap: 0.75rem;
+    .social-nav {
+        top: calc(50% + 2rem);
+        gap: 1rem;
+        padding: 0.5rem;
     }
     
     .social-link {
-        padding: 0.4rem 0.6rem;
+        padding: 0.5rem 0.75rem;
     }
     
     .social-icon {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
     }
     
     .social-text {
@@ -376,19 +378,19 @@ body {
     }
 }
 
-/* Social Media Sidebar */
-.social-sidebar {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+/* Social Media Navigation */
+.social-nav {
+    position: absolute;
+    top: calc(50% + 4rem);
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     z-index: 3;
-    padding: 1rem 0;
-    max-height: 80vh;
-    overflow-y: auto;
+    padding: 1rem;
+    background: rgba(10, 10, 10, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
 }
 
 .social-link {
@@ -456,7 +458,7 @@ body {
         animation: none;
     }
     
-    .social-sidebar {
+    .social-nav {
         display: none;
     }
 }
