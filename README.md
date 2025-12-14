@@ -1,4 +1,4 @@
-# Cloud Rio - 2000s Retro Minimalist Blog
+# Cloud Rio
 
 A personal blog by Rio featuring a 2000s retro minimalist aesthetic with bold typography and clean design.
 
