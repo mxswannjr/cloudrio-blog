@@ -39,7 +39,6 @@
             
             setupEventListeners();
             createCircuitBoard();
-            createConnectionPaths();
             createInitialRain();
             startRainGeneration();
             startCleanup();
@@ -85,33 +84,7 @@
         }
     }
 
-    // Create connection paths between logo and components
-    function createConnectionPaths() {
-        try {
-            const svg = document.querySelector('.connection-paths');
-            if (!svg) return;
 
-            // Define connection paths from center (M logo) to each component
-            const connections = [
-                { id: 'github-path', d: 'M 50 50 L 50 25' }, // Top
-                { id: 'linkedin-path', d: 'M 50 50 L 75 50' }, // Right
-                { id: 'instagram-path', d: 'M 50 50 L 50 75' }, // Bottom
-                { id: 'twitter-path', d: 'M 50 50 L 25 50' }   // Left
-            ];
-
-            connections.forEach(conn => {
-                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                path.setAttribute('id', conn.id);
-                path.setAttribute('d', conn.d);
-                path.setAttribute('class', 'connection-path');
-                path.setAttribute('stroke', 'url(#connectionGradient)');
-                svg.appendChild(path);
-            });
-
-        } catch (error) {
-            console.error('Failed to create connection paths:', error);
-        }
-    }
 
     // Create a single rain column safely
     function createRainColumn() {
