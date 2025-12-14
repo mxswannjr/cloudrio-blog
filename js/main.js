@@ -211,25 +211,7 @@
         }
     }
 
-    // Setup component hover effects
-    function setupComponentHoverEffects() {
-        const components = ['github', 'linkedin', 'instagram', 'twitter'];
 
-        components.forEach(component => {
-            const link = document.getElementById(`${component}-link`);
-            const path = document.getElementById(`${component}-path`);
-
-            if (link && path) {
-                link.addEventListener('mouseenter', () => {
-                    path.classList.add('active');
-                });
-
-                link.addEventListener('mouseleave', () => {
-                    path.classList.remove('active');
-                });
-            }
-        });
-    }
     
     // Cleanup function
     function cleanup() {
