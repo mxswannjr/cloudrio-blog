@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario</title>
+    <meta name="description" content="Digital Signature">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                   script-src 'self'; 
+                   style-src 'self'; 
+                   font-src 'self'; 
+                   img-src 'self' data:; 
+                   connect-src 'self'; 
+                   object-src 'none'; 
+                   base-uri 'self'; 
+                   form-action 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=()">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Decorative background element - hidden from screen readers -->
+    <div class="matrix-rain" id="matrix-rain" aria-hidden="true" role="presentation"></div>
+    
+    <!-- Main Content -->
+    <main class="container" role="main">
+        <header class="logo-container">
+            <h1 class="logo" id="logo" aria-label="Mario Digital Signature" tabindex="0">Mario</h1>
+        </header>
+    </main>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

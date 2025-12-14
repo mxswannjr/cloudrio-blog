@@ -1,0 +1,285 @@
+/* Mario Digital Signature - Matrix/Tron Aesthetic */
+
+/* Self-hosted JetBrains Mono */
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/JetBrainsMono-Bold.woff2') format('woff2');
+}
+
+/* CSS Variables with fallbacks for older browsers */
+:root {
+    --bg-color: #0a0a0a;
+    --rain-color: #9333ea;
+    --rain-opacity: 0.15;
+    --logo-color: #a855f7;
+    --logo-glow: rgba(168, 85, 247, 0.8);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'SF Mono', 'Monaco', 'Consolas', monospace;
+    background-color: #0a0a0a; /* Fallback for older browsers */
+    background-color: var(--bg-color);
+    color: #a855f7; /* Fallback for older browsers */
+    color: var(--logo-color);
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Digital Rain Background */
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.rain-column {
+    position: absolute;
+    top: -100%;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #9333ea; /* Fallback */
+    color: var(--rain-color);
+    opacity: var(--rain-opacity);
+    animation: fall linear infinite;
+    white-space: nowrap;
+    user-select: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(calc(100vh + 100%));
+    }
+}
+
+/* Main Container */
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Logo Container */
+.logo-container {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: orbitalDrift 25s cubic-bezier(0.4, 0.0, 0.6, 1) infinite;
+}
+
+/* Mario Logo */
+.logo {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #a855f7; /* Fallback */
+    color: var(--logo-color);
+    text-shadow: 
+        0 0 10px rgba(168, 85, 247, 0.8),
+        0 0 20px rgba(168, 85, 247, 0.8),
+        0 0 30px rgba(168, 85, 247, 0.5),
+        0 0 40px rgba(168, 85, 247, 0.3);
+    animation: 
+        breatheGlow 4s ease-in-out infinite,
+        subtleScale 25s cubic-bezier(0.4, 0.0, 0.6, 1) infinite;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+.logo:focus {
+    outline: 2px solid #a855f7;
+    outline-offset: 4px;
+    outline-style: solid;
+}
+
+/* Orbital Drift Animation */
+@keyframes orbitalDrift {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(30px, -20px);
+    }
+    50% {
+        transform: translate(0, -40px);
+    }
+    75% {
+        transform: translate(-30px, -20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Breathing Glow Animation */
+@keyframes breatheGlow {
+    0%, 100% {
+        filter: brightness(1);
+        text-shadow: 
+            0 0 10px rgba(168, 85, 247, 0.8),
+            0 0 20px rgba(168, 85, 247, 0.8),
+            0 0 30px rgba(168, 85, 247, 0.5),
+            0 0 40px rgba(168, 85, 247, 0.3);
+    }
+    50% {
+        filter: brightness(1.2);
+        text-shadow: 
+            0 0 15px rgba(168, 85, 247, 0.8),
+            0 0 25px rgba(168, 85, 247, 0.8),
+            0 0 35px rgba(168, 85, 247, 0.6),
+            0 0 45px rgba(168, 85, 247, 0.4);
+    }
+}
+
+/* Subtle Scale Animation */
+@keyframes subtleScale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.02);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    75% {
+        transform: scale(1.01);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+    
+    .rain-column {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+    
+    .rain-column {
+        font-size: 10px;
+    }
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+    .logo-container,
+    .logo {
+        animation: none !important;
+    }
+    
+    .rain-column {
+        animation-duration: 20s !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --rain-opacity: 0.5; /* Increased for better contrast */
+    }
+    
+    .logo {
+        text-shadow: 
+            0 0 5px rgba(168, 85, 247, 0.8),
+            0 0 10px rgba(168, 85, 247, 0.8);
+    }
+}
+
+/* Light mode support */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #f8f8f8;
+        --rain-color: #7c3aed;
+        --logo-color: #8b5cf6;
+        --logo-glow: rgba(139, 92, 246, 0.8);
+    }
+    
+    body {
+        background-color: #f8f8f8;
+        color: #8b5cf6;
+    }
+    
+    .logo {
+        color: #8b5cf6;
+        text-shadow: 
+            0 0 10px rgba(139, 92, 246, 0.8),
+            0 0 20px rgba(139, 92, 246, 0.8),
+            0 0 30px rgba(139, 92, 246, 0.5),
+            0 0 40px rgba(139, 92, 246, 0.3);
+    }
+    
+    .logo:focus {
+        outline-color: #8b5cf6;
+    }
+}
+
+/* Browser compatibility for older browsers */
+@supports not (display: grid) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .matrix-rain {
+        display: none;
+    }
+    
+    .logo {
+        color: black;
+        text-shadow: none;
+        animation: none;
+    }
+}
