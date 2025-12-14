@@ -386,6 +386,9 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     z-index: 3;
+    padding: 1rem 0;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .social-link {
