@@ -38,7 +38,6 @@
             }
             
             setupEventListeners();
-            createCircuitBoard();
             createInitialRain();
             startRainGeneration();
             startCleanup();
@@ -49,40 +48,7 @@
         }
     }
     
-    // Create circuit board background
-    function createCircuitBoard() {
-        try {
-            const circuitBoard = document.createElement('div');
-            circuitBoard.className = 'circuit-board';
-            document.body.appendChild(circuitBoard);
 
-            // Create circuit paths
-            const paths = [
-                { top: '20%', left: '10%', width: '30%', height: '2px', delay: 0 },
-                { top: '40%', left: '60%', width: '25%', height: '2px', delay: 2 },
-                { top: '60%', left: '20%', width: '40%', height: '2px', delay: 4 },
-                { top: '80%', left: '50%', width: '35%', height: '2px', delay: 6 },
-                { top: '30%', left: '80%', width: '15%', height: '2px', delay: 1 },
-                { top: '70%', left: '5%', width: '20%', height: '2px', delay: 3 },
-                { top: '50%', left: '35%', width: '30%', height: '2px', delay: 5 },
-                { top: '15%', left: '70%', width: '25%', height: '2px', delay: 7 }
-            ];
-
-            paths.forEach(path => {
-                const pathElement = document.createElement('div');
-                pathElement.className = 'circuit-path';
-                pathElement.style.top = path.top;
-                pathElement.style.left = path.left;
-                pathElement.style.width = path.width;
-                pathElement.style.height = path.height;
-                pathElement.style.animationDelay = path.delay + 's';
-                circuitBoard.appendChild(pathElement);
-            });
-
-        } catch (error) {
-            console.error('Failed to create circuit board:', error);
-        }
-    }
 
 
 

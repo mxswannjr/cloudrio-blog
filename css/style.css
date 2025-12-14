@@ -31,17 +31,7 @@ body {
     padding: 0;
 }
 
-/* Circuit Board Background */
-.circuit-board {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.25;
-}
+/* Circuit Board Background - Removed */
 
 .circuit-path {
     position: absolute;
@@ -127,21 +117,7 @@ body {
     opacity: 1;
 }
 
-.component-icon {
-    width: 28px;
-    height: 28px;
-    color: var(--logo-color);
-    opacity: 0.7;
-    transition: all 0.4s ease;
-    z-index: 1;
-    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5));
-}
 
-.component-link:hover .component-icon {
-    opacity: 1;
-    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.9)) brightness(1.4);
-    transform: scale(1.1);
-}
 
 .component-label {
     color: var(--logo-color);
@@ -385,10 +361,7 @@ body {
         height: 45px;
     }
 
-    .component-icon {
-        width: 22px;
-        height: 22px;
-    }
+
 
     .component-label {
         font-size: 0.65rem;
@@ -529,10 +502,7 @@ body {
         height: 40px;
     }
 
-    .component-icon {
-        width: 18px;
-        height: 18px;
-    }
+
 
     .component-label {
         font-size: 0.6rem;
@@ -712,8 +682,7 @@ body {
         color: black;
     }
 
-    .matrix-rain,
-    .circuit-board {
+    .matrix-rain {
         display: none;
     }
 
