@@ -28,7 +28,7 @@
     let lastColumnTime = 0;
     let cachedColumns = null;
     
-    // Initialize the application
+    // Initialize application
     function init() {
         try {
             matrixRain = document.getElementById('matrix-rain');

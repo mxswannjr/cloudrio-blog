@@ -33,9 +33,9 @@ A static digital signature page featuring Matrix-style digital rain effects.
 ```
 
 ### Typography
-- **Primary**: SF Mono, Monaco, Cascadia Code, Consolas, monospace
-- **Fallback**: System monospace stack
-- **Weight**: 400 (regular)
+- **Primary**: JetBrains Mono (self-hosted WOFF2)
+- **Fallback**: Fira Code, Source Code Pro, SF Mono, Monaco, Consolas, monospace
+- **Weight**: 400 (regular), 700 (bold)
 - **Character spacing**: 0.05em
 
 ### Animation Specifications
@@ -46,12 +46,15 @@ A static digital signature page featuring Matrix-style digital rain effects.
 
 ### File Structure
 ```
-/
+mario-signature/
 ├── index.html          # Main HTML document
 ├── css/
 │   └── style.css       # Styles and animations
 ├── js/
 │   └── main.js         # Matrix rain engine
+├── fonts/
+│   ├── JetBrainsMono-Regular.woff2
+│   └── JetBrainsMono-Bold.woff2
 └── README.md           # This documentation
 ```
 
