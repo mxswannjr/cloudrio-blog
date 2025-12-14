@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Rio - Test Page</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        .test-box {
+            background: linear-gradient(135deg, #ff0066 0%, #9400d3 50%, #00ffff 100%);
+            padding: 40px;
+            border: 3px solid #ffff00;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: glitch 2s infinite;
+        }
+        @keyframes glitch {
+            0%, 100% { text-shadow: 2px 2px 0px #ffff00, 4px 4px 0px #ff1493, 6px 6px 0px #00ffff; }
+            25% { text-shadow: -2px 2px 0px #00ff00, 4px -4px 0px #9400d3, -6px 6px 0px #ffff00; }
+            50% { text-shadow: 2px -2px 0px #00ffff, -4px 4px 0px #ffff00, 6px -4px 0px #ff1493; }
+            75% { text-shadow: -2px -2px 0px #9400d3, -4px -4px 0px #00ff00, -6px -6px 0px #00ffff; }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        CLOUD RIO TEST
+    </div>
+    <p>If you see this with animated colors and effects, CSS is working!</p>
+</body>
+</html>
