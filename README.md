@@ -1,178 +1,78 @@
 # Mario Digital Signature
 
-A minimalist digital signature page featuring Mario with Matrix-style digital rain effects and cyberpunk aesthetics.
+A static digital signature page featuring Matrix-style digital rain effects.
 
-## 🎨 **Design Philosophy**
+## Technical Specification
 
-- **Cyberpunk Aesthetic**: Matrix-inspired digital rain with glowing effects
-- **Minimalist Approach**: Single focus on the digital signature
-- **Performance Optimized**: Smooth animations with accessibility support
-- **Security First**: Enterprise-level security implementation
+### Architecture
+- **HTML5**: Semantic markup with accessibility features
+- **CSS3**: Custom properties, animations, responsive design
+- **Vanilla JavaScript**: No dependencies, secure DOM manipulation
+- **Static Hosting**: No backend required
 
-## 🚀 **Features**
+### Security Implementation
+- Content Security Policy (CSP) with restrictive directives
+- XSS prevention through safe DOM methods
+- No external dependencies or third-party scripts
+- Security headers: X-Frame-Options, X-Content-Type-Options, Permissions-Policy
 
-### Visual Design
-- **Matrix Rain**: Animated digital rain background with falling characters
-- **Space Mono Typography**: Monospace font for cyberpunk aesthetic
-- **Glowing Effects**: Cyan glow with breathing animations
-- **Dark Theme**: Black background with green/cyan accents
-- **Responsive Design**: Optimized for all screen sizes
+### Performance Features
+- Memory leak prevention with automatic cleanup
+- Rate limiting for DOM operations
+- Visibility API integration for tab optimization
+- Reduced motion support for accessibility
+- Maximum 50 concurrent rain columns
 
-### Interactive Elements
-- **Digital Rain**: Continuously falling matrix characters
-- **Orbital Drift**: Subtle logo movement patterns
-- **Breathing Glow**: Pulsating light effects
-- **Performance Optimized**: Respects user motion preferences
-
-## 🔒 **Security Features**
-
-- Content Security Policy (CSP) headers
-- XSS protection through input sanitization
-- Secure external resource loading
-- Form validation and sanitization
-- Security headers (X-Frame-Options, X-Content-Type-Options)
-
-## Security Features
-
-- Content Security Policy (CSP) headers
-- XSS protection through input sanitization
-- Secure external resource loading
-- Form validation and sanitization
-- Security headers (X-Frame-Options, X-Content-Type-Options)
-
-## ⚡ **Performance**
-
-- **Lazy Loading**: Images load when needed
-- **Minimal Dependencies**: No external font libraries
-- **Optimized CSS**: Efficient selectors and animations
-- **Clean JavaScript**: Efficient DOM manipulation
-
-## 🎭 **Core Features**
-
-- **Digital Signature**: Central "Mario" branding with cyberpunk aesthetics
-- **Matrix Rain**: Continuously animated background effect
-- **Security Hardened**: Enterprise-level security implementation
-- **Performance Optimized**: Smooth 60fps animations with accessibility support
-- **Responsive Design**: Perfect scaling across all devices
-
-## 🎯 **Key Design Elements**
-
-### Color Palette
+### Color Scheme
 ```css
---bg-color: #0a0a0a           /* Dark background */
---rain-color: #00ff41         /* Matrix green */
---logo-color: #00ffff         /* Cyan blue */
---logo-glow: rgba(0, 255, 255, 0.8)  /* Glow effect */
+--bg-color: #0a0a0a           /* Charcoal background */
+--rain-color: #9333ea         /* Digital violet */
+--rain-opacity: 0.15           /* Subtle rain effect */
+--logo-color: #a855f7         /* Bright purple */
+--logo-glow: rgba(168, 85, 247, 0.8)  /* Glow effect */
 ```
 
 ### Typography
-- **Font**: Space Mono, monospace
-- **Style**: Cyberpunk/Matrix aesthetic
-- **Effects**: Glowing text shadows
-- **Responsive**: Fluid typography scaling
+- **Primary**: SF Mono, Monaco, Cascadia Code, Consolas, monospace
+- **Fallback**: System monospace stack
+- **Weight**: 400 (regular)
+- **Character spacing**: 0.05em
 
-### Animations
-- **Matrix Rain**: Falling character columns
-- **Orbital Drift**: Subtle logo movement
-- **Breathing Glow**: Pulsating light effects
-- **Performance Optimized**: Respects user preferences
+### Animation Specifications
+- **Matrix Rain**: Continuous falling characters, 15-25s duration
+- **Orbital Drift**: 25s figure-8 pattern, cubic-bezier easing
+- **Breathing Glow**: 4s pulse cycle, ±20% brightness variation
+- **Subtle Scale**: ±2% scale variation synchronized with drift
 
-## 📁 **File Structure**
-
+### File Structure
 ```
-personal-blog/
-├── index.html          # Main HTML file - Mario digital signature
+/
+├── index.html          # Main HTML document
 ├── css/
-│   └── style.css       # Matrix/cyberpunk styles
+│   └── style.css       # Styles and animations
 ├── js/
-│   └── main.js         # Matrix rain animation
-├── .github/workflows/   # GitHub Pages deployment
-├── netlify.toml        # Netlify configuration
-├── vercel.json         # Vercel configuration
-├── README.md           # This file
-└── SECURITY_REPORT.md   # Security audit results
+│   └── main.js         # Matrix rain engine
+└── README.md           # This documentation
 ```
 
-## Quick Start
+### Deployment
+Copy files to any web server or static hosting platform. No build process required.
 
-1. Clone or download the project
-2. Open `index.html` in your browser
-3. Or use a local server for better development experience:
+### Browser Support
+- Modern browsers (Chrome 60+, Firefox 55+, Safari 12+, Edge 79+)
+- Graceful degradation for older browsers
+- Mobile responsive with touch support
 
-```bash
-# Using Python 3
-python -m http.server 8000
-
-# Using Node.js (if you have http-server installed)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
+### Configuration
+Modify constants in `js/main.js`:
+```javascript
+const CONFIG = {
+    INITIAL_COLUMNS: 15,        // Starting rain columns
+    COLUMN_CREATION_INTERVAL: 800,  // ms between new columns
+    MAX_COLUMNS: 50,            // Maximum concurrent columns
+    MIN_COLUMN_LENGTH: 10,      // Minimum characters per column
+    MAX_COLUMN_LENGTH: 30,      // Maximum characters per column
+    MIN_ANIMATION_DURATION: 15,  // Minimum fall duration (seconds)
+    MAX_ANIMATION_DURATION: 25   // Maximum fall duration (seconds)
+};
 ```
-
-Then visit `http://localhost:8000`
-
-## Deployment
-
-### GitHub Pages
-1. Push the code to a GitHub repository
-2. Go to Settings > Pages
-3. Select source as "Deploy from a branch"
-4. Choose main branch and save
-5. Your site will be available at `https://username.github.io/repository-name`
-
-### Netlify
-1. Push code to GitHub
-2. Connect your repository to Netlify
-3. Set build command to empty (static site)
-4. Set publish directory to `.`
-5. Deploy!
-
-### Vercel
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel`
-3. Follow the prompts
-
-### Traditional Hosting
-Upload all files to your web server's public directory (usually `public_html` or `www`).
-
-## 🎨 **Customization**
-
-### Changing Colors
-Edit the CSS variables in `css/style.css`:
-```css
-:root {
-    --primary-color: #000000;
-    --accent-color: #ff0000;
-    /* ... other colors */
-}
-```
-
-### Updating Content
-Edit the `blogPosts` array in `js/main.js` with your own posts.
-
-### Modifying Theme
-The design is intentionally minimal - small changes create big impact.
-
-## 🎯 **Design Inspiration**
-
-- **2000s Retro Aesthetic**: Bold graphics, diagonal lines, MTV vibes
-- **Minimalist Design**: Clean elements, maximum impact
-- **Personal Branding**: Authentic voice, genuine expression
-- **Modern Retro**: Contemporary take on classic 2000s design
-
-## 🔧 **Technical Stack**
-
-- **HTML5**: Semantic, accessible markup
-- **CSS3**: Modern features with fallbacks
-- **Vanilla JavaScript**: No frameworks, pure functionality
-- **Static Hosting**: No backend required
-
----
-
-**Status**: ✅ Production Ready  
-**Style**: 🎨 Matrix/Cyberpunk Digital Signature  
-**Security**: 🔒 Enterprise-level protection  
-**Performance**: ⚡ Optimized for 60fps animations  
-
-**This is Mario - a digital signature experience.**

@@ -3,10 +3,10 @@
 /* CSS Variables with fallbacks for older browsers */
 :root {
     --bg-color: #0a0a0a;
-    --rain-color: #00ff41;
+    --rain-color: #9333ea;
     --rain-opacity: 0.15;
-    --logo-color: #00ffff;
-    --logo-glow: rgba(0, 255, 255, 0.8);
+    --logo-color: #a855f7;
+    --logo-glow: rgba(168, 85, 247, 0.8);
 }
 
 /* Reset and Base Styles */
@@ -17,10 +17,10 @@
 }
 
 body {
-    font-family: 'Space Mono', 'Courier New', monospace;
+    font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Consolas', monospace;
     background-color: #0a0a0a; /* Fallback for older browsers */
     background-color: var(--bg-color);
-    color: #00ffff; /* Fallback for older browsers */
+    color: #a855f7; /* Fallback for older browsers */
     color: var(--logo-color);
     min-height: 100vh;
     overflow: hidden;
@@ -45,6 +45,7 @@ body {
     top: -100%;
     font-size: 14px;
     line-height: 1.2;
+    color: #9333ea; /* Fallback */
     color: var(--rain-color);
     opacity: var(--rain-opacity);
     animation: fall linear infinite;
@@ -82,13 +83,13 @@ body {
     font-weight: 400;
     letter-spacing: 0.05em;
     text-align: center;
-    color: #00ffff; /* Fallback */
+    color: #a855f7; /* Fallback */
     color: var(--logo-color);
     text-shadow: 
-        0 0 10px rgba(0, 255, 255, 0.8),
-        0 0 20px rgba(0, 255, 255, 0.8),
-        0 0 30px rgba(0, 255, 255, 0.5),
-        0 0 40px rgba(0, 255, 255, 0.3);
+        0 0 10px rgba(168, 85, 247, 0.8),
+        0 0 20px rgba(168, 85, 247, 0.8),
+        0 0 30px rgba(168, 85, 247, 0.5),
+        0 0 40px rgba(168, 85, 247, 0.3);
     animation: 
         breatheGlow 4s ease-in-out infinite,
         subtleScale 25s cubic-bezier(0.4, 0.0, 0.6, 1) infinite;
@@ -104,7 +105,7 @@ body {
 
 /* Focus styles for accessibility */
 .logo:focus {
-    outline: 2px solid #00ffff;
+    outline: 2px solid #a855f7;
     outline-offset: 4px;
     outline-style: solid;
 }
@@ -205,36 +206,36 @@ body {
     
     .logo {
         text-shadow: 
-            0 0 5px rgba(0, 255, 255, 0.8),
-            0 0 10px rgba(0, 255, 255, 0.8);
+            0 0 5px rgba(168, 85, 247, 0.8),
+            0 0 10px rgba(168, 85, 247, 0.8);
     }
 }
 
 /* Light mode support */
 @media (prefers-color-scheme: light) {
     :root {
-        --bg-color: #f0f0f0;
-        --rain-color: #006400;
-        --logo-color: #008080;
-        --logo-glow: rgba(0, 128, 128, 0.8);
+        --bg-color: #f8f8f8;
+        --rain-color: #7c3aed;
+        --logo-color: #8b5cf6;
+        --logo-glow: rgba(139, 92, 246, 0.8);
     }
     
     body {
-        background-color: #f0f0f0;
-        color: #008080;
+        background-color: #f8f8f8;
+        color: #8b5cf6;
     }
     
     .logo {
-        color: #008080;
+        color: #8b5cf6;
         text-shadow: 
-            0 0 10px rgba(0, 128, 128, 0.8),
-            0 0 20px rgba(0, 128, 128, 0.8),
-            0 0 30px rgba(0, 128, 128, 0.5),
-            0 0 40px rgba(0, 128, 128, 0.3);
+            0 0 10px rgba(139, 92, 246, 0.8),
+            0 0 20px rgba(139, 92, 246, 0.8),
+            0 0 30px rgba(139, 92, 246, 0.5),
+            0 0 40px rgba(139, 92, 246, 0.3);
     }
     
     .logo:focus {
-        outline-color: #008080;
+        outline-color: #8b5cf6;
     }
 }
 
