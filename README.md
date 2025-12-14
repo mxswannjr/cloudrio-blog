@@ -174,5 +174,3 @@ The design is intentionally minimal - small changes create big impact.
 **Style**: 🎨 Matrix/Cyberpunk Digital Signature  
 **Security**: 🔒 Enterprise-level protection  
 **Performance**: ⚡ Optimized for 60fps animations  
-
-**This is Mario - a digital signature experience.**
