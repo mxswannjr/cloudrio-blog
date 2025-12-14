@@ -230,9 +230,23 @@ body {
         font-size: 12px;
     }
     
-    .social-orbit {
-        width: 300px;
-        height: 300px;
+    .social-nav {
+        top: calc(50% + 3rem);
+        gap: 2rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .social-link {
+        padding: 0.8rem 1rem;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-label {
+        font-size: 0.7rem;
     }
     
     .social-link {
@@ -275,39 +289,24 @@ body {
         font-size: 10px;
     }
     
-    .social-orbit {
-        width: 250px;
-        height: 250px;
+    .social-nav {
+        top: calc(50% + 2rem);
+        gap: 1.5rem;
+        padding: 0.75rem 1rem;
     }
-    
+
     .social-link {
-        width: 25px;
-        height: 25px;
+        padding: 0.6rem 0.8rem;
+        min-width: 80px;
     }
-    
+
     .social-icon {
-        width: 12px;
-        height: 12px;
+        width: 18px;
+        height: 18px;
     }
-    
-    @keyframes orbitTwitter {
-        0% { transform: rotate(0deg) translateX(75px) translateY(0px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(75px) translateY(0px) rotate(-360deg); }
-    }
-    
-    @keyframes orbitGithub {
-        0% { transform: rotate(90deg) translateX(100px) translateY(0px) rotate(-90deg); }
-        100% { transform: rotate(450deg) translateX(100px) translateY(0px) rotate(-450deg); }
-    }
-    
-    @keyframes orbitLinkedin {
-        0% { transform: rotate(180deg) translateX(125px) translateY(0px) rotate(-180deg); }
-        100% { transform: rotate(540deg) translateX(125px) translateY(0px) rotate(-540deg); }
-    }
-    
-    @keyframes orbitInstagram {
-        0% { transform: rotate(270deg) translateX(150px) translateY(0px) rotate(-270deg); }
-        100% { transform: rotate(630deg) translateX(150px) translateY(0px) rotate(-630deg); }
+
+    .social-label {
+        font-size: 0.65rem;
     }
 }
 
