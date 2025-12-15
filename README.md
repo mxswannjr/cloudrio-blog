@@ -2,6 +2,41 @@
 
 A static digital signature page featuring Matrix-style digital rain effects.
 
+## Design Overview
+
+### Design Philosophy
+This project embodies a cyberpunk aesthetic inspired by *The Matrix* trilogy, where digital rain symbolizes the flow of information in a virtual world. The design philosophy centers on creating a minimalist yet immersive digital signature that represents modern identity in the information age. Key principles include:
+
+- **Minimalism with Impact**: Clean, uncluttered interface that focuses attention on the signature text
+- **Cyberpunk Aesthetics**: Dark theme with neon accents evoking hacker culture and digital rebellion
+- **Performance-First**: Animations designed to be smooth and efficient, prioritizing user experience over visual complexity
+- **Accessibility**: Inclusive design ensuring readability and usability across devices and abilities
+
+### Visual Design Principles
+The visual design follows a systematic approach to color theory and typography:
+
+- **Color Psychology**: Charcoal background (#0a0a0a) provides high contrast for text readability while creating a sense of depth. Violet rain (#9333ea) represents digital energy and movement, with purple logo (#a855f7) serving as a focal point.
+- **Contrast and Hierarchy**: Logo text uses bright purple with glow effects for prominence, while rain characters maintain low opacity (0.15) to avoid visual noise.
+- **Grid and Spacing**: Monospace typography ensures character alignment, with 0.05em letter-spacing for optimal readability in code-like presentation.
+- **Responsive Scaling**: Design adapts fluidly from mobile to desktop, maintaining proportions and legibility.
+
+### Interaction Design
+User interactions are subtle and non-intrusive:
+
+- **Micro-Interactions**: Breathing glow and orbital drift create living, breathing feel without demanding attention
+- **Progressive Enhancement**: Core functionality works without JavaScript; animations enhance the experience
+- **Performance Optimization**: Animations pause when tab is hidden, reducing CPU usage and battery drain
+- **Touch-Friendly**: Responsive design supports touch interactions on mobile devices
+
+### Architectural Design Decisions
+The architecture prioritizes maintainability, security, and performance:
+
+- **Component Separation**: HTML for structure, CSS for presentation, JavaScript for behavior
+- **Modular CSS**: Custom properties enable easy theming and maintenance
+- **Vanilla JavaScript**: No framework dependencies reduce bundle size and potential security vulnerabilities
+- **Static Architecture**: Eliminates server-side complexity, enabling deployment to any static host
+- **CSP Implementation**: Strict Content Security Policy prevents XSS attacks by disallowing inline scripts and external resources
+
 ## Technical Specification
 
 ### Architecture
