@@ -244,12 +244,8 @@
         }
     }
     
-    // Initialize when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
+    // Initialize immediately
+    init();
     
     // Expose cleanup function for external use if needed
     window.MarioSignature = {
