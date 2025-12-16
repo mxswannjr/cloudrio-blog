@@ -223,8 +223,13 @@
         }
     }
 
+    // Setup component hover effects (placeholder for future enhancements)
+    function setupComponentHoverEffects() {
+        // Component hover effects can be added here if needed
+        // Currently just a placeholder to prevent errors
+        console.log('Component hover effects initialized');
+    }
 
-    
     // Cleanup function
     function cleanup() {
         try {
